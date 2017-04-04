@@ -1,0 +1,7 @@
+prefix=/usr/local
+exec_prefix=${prefix}
+srcdir=${prefix}/share/apertium/apertium-ces
+
+Name: apertium-ces
+Description: Finite-state morphological transducer and constraint grammar for Czech 
+Version: 0.1.0

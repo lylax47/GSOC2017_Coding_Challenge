@@ -1,0 +1,5 @@
+
+  
+    lt-proc -w '/home/john/GSOC/apertium/apertium-ces-rus/rus-ces.automorf.bin' | cg-proc -w '/home/john/GSOC/apertium/apertium-ces-rus/rus-ces.rlx.bin' | apertium-tagger -g $2 '/home/john/GSOC/apertium/apertium-ces-rus/rus-ces.prob' | lt-proc -b '/home/john/GSOC/apertium/apertium-ces-rus/rus-ces.autobil.bin' | lrx-proc -m '/home/john/GSOC/apertium/apertium-ces-rus/rus-ces.autolex.bin' | apertium-pretransfer| lt-proc -b '/home/john/GSOC/apertium/apertium-ces-rus/rus-ces.autobil.bin' | apertium-transfer -b '/home/john/GSOC/apertium/apertium-ces-rus/apertium-ces-rus.rus-ces.t1x'  '/home/john/GSOC/apertium/apertium-ces-rus/rus-ces.t1x.bin' | apertium-interchunk '/home/john/GSOC/apertium/apertium-ces-rus/apertium-ces-rus.rus-ces.t2x'  '/home/john/GSOC/apertium/apertium-ces-rus/rus-ces.t2x.bin' | apertium-postchunk '/home/john/GSOC/apertium/apertium-ces-rus/apertium-ces-rus.rus-ces.t3x'  '/home/john/GSOC/apertium/apertium-ces-rus/rus-ces.t3x.bin' | lt-proc $1 '/home/john/GSOC/apertium/apertium-ces-rus/rus-ces.autogen.bin' 
+  
+

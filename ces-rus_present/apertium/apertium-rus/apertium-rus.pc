@@ -1,0 +1,7 @@
+prefix=/usr/local
+exec_prefix=${prefix}
+srcdir=${prefix}/share/apertium/apertium-rus
+
+Name: apertium-rus
+Description: Finite-state morphological transducer and constraint grammar for Russian 
+Version: 0.1.0

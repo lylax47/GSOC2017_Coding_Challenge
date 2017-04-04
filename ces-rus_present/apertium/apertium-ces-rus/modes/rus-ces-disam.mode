@@ -1,0 +1,7 @@
+
+  
+    lt-proc -w '/home/john/GSOC/apertium/apertium-ces-rus/rus-ces.automorf.bin' | cg-conv -a| vislcg3 --trace --grammar '/home/john/GSOC/apertium/apertium-ces-rus/rus-ces.rlx.bin' 
+  
+
+
+  

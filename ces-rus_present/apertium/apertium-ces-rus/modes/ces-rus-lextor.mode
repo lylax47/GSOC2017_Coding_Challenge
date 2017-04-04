@@ -1,0 +1,6 @@
+
+  
+    lt-proc -w '/home/john/GSOC/apertium/apertium-ces-rus/ces-rus.automorf.bin' | cg-proc -n -1 -w '/home/john/GSOC/apertium/apertium-ces-rus/ces-rus.rlx.bin' | apertium-pretransfer| lt-proc -b '/home/john/GSOC/apertium/apertium-ces-rus/ces-rus.autobil.bin' | lrx-proc -t -m '/home/john/GSOC/apertium/apertium-ces-rus/ces-rus.autolex.bin' 
+  
+
+  

@@ -1,0 +1,6 @@
+
+  
+    lt-proc -w '/home/john/GSOC/apertium/apertium-ces-rus/rus-ces.automorf.bin' | cg-proc -w '/home/john/GSOC/apertium/apertium-ces-rus/rus-ces.rlx.bin' | apertium-tagger -g $2 '/home/john/GSOC/apertium/apertium-ces-rus/rus-ces.prob' 
+  
+
+  

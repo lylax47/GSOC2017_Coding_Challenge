@@ -1,0 +1,4 @@
+
+      
+    lt-proc -w '/home/john/GSOC/apertium/apertium-ces/ces.automorf.bin' | cg-conv -a -l| vislcg3 --trace -g '/home/john/GSOC/apertium/apertium-ces/apertium-ces.ces.rlx' 
+  
