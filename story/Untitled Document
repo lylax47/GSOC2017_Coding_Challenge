@@ -1,0 +1,190 @@
+
+== Contact Information ==
+
+'''Name:''' John Lyell
+
+'''Location:''' Moscow, RU (In Florida, US after June)
+
+'''Phone number:''' ''RU'' - +79629798067/ ''US'' - +16083546734
+
+'''Email:''' jjlyell@gmail.com
+
+'''IRC:''' lylax
+
+'''Timezone:''' UTC+3 (UTC -5 after June)
+
+
+== Relevant Skills and Experience ==
+'''Education:''' Bachelors(2015): dual BA in Russian Language and Economics, Russian Flagship Program, Masters(exp. 2017): Computational Linguistics
+
+'''Programming Skills:''' Python(NLTK, Pandas, Numpy, Tensorflow, Scikit-learn, lxml, Django), R, Octave, Bash, Matxin(Apertium with syntactic transfer), Javascript(Jquery, D3)
+
+'''Technical Skills:''' XML, JSON, HTML, CSS, Regex, Ajax 
+
+'''Related Experience:''' Alicante RBML workshop 2016 - implementing Ru-En language pair for Matxin
+
+'''Languages:''' English(native), Russian(fluent), Polish(intermediate), Italian(intermediate), Czech(beginner)
+
+'''Github:''' [https://github.com/lylax47/ lylax47]
+
+== Why are you interested in Apertium? ==
+
+I took part in the RBMT summer school in Alicante and found the concept, process, and Apertium/machine-translation community thoroughly enticing and enjoyable. Ever since I have been planning to apply my knowledge and skills for GSOC 2017 in order to take part in developing a new language pair for Apertium.
+
+== Proposal ==
+
+My proposal is to bring the unilateral Ces -> Rus language pair to a staging state, focusing mainly, at first, upon an effective unilateral translator(Ces -> Ru), and if time allows, working on the language pair as a whole.
+
+=== Reasons to sponsor this project ===
+
+Both Russian and Czech are not at all represented in Apertium's released language pairs and are only each featured once in staged language pairs (Rus-Bel, Pol-Ces). While both languages are in the Slavic language family, Rus-Ces are much further apart than the aforementioned pairs and would provide a unique challenge and a very worthwhile prospective product. I am extremely knowledgeable of Russian, as well as to a lesser extent Polish. Seeing as the Czech language and grammar is extremely close to both of these languages, especially Polish, I am especially qualified to work on this language pair. Additionally, state-of-the-art statistical translators, such as google translate, still make basic easily correctable grammatical and lexical errors.
+----
+
+
+''ex. Мария пришла после обеда. (Mary came after lunch.) -> Mary přišli v odpoledních hodinách. (Mary came[pl.] in the afternoon.) ''
+
+''Correct: Mary přišla po obědě. (Mary came[f.] after lunch)''
+
+----
+
+
+Thusly, there is a clearly unfulfilled niche which a rule-based translator such as Apertium could satisfy.
+
+=== Who it will benefit? ===
+
+Developing this language pair will be very beneficial to language learners, tourists, academics, translators, as well as businesses and organisations of both countries. Excluding the recent sanctions, ties between Russian and the Czech Republic have been positively trending, especially in the spheres of trade and tourism, making the development of such a language pair increasingly useful for both business and leisure travelers.
+
+=== Primary Goals ===
+
+* Stable release of Ces -> Rus
+** Accuracy of Ces -> Rus < 10 % WER
+
+==== ''Ancillary Goals'' ====
+
+* Viable if primary goals are acheived faster than anticipated
+** Improve accuracy of Rus -> Ces
+** Accuracy of Rus -> Ces < 40 % WER
+
+
+=== Timeline ===
+
+{| class="wikitable" border="1"
+|-
+! Week
+! Dates
+! Objective
+! Measures/targets
+! Comments
+|-
+| 0
+| now - 30/05
+| Find resources for improving the bilingual dictionary. Study Czech grammar. Write Bash scripts for easy alteration, compiling, and measurement. Parse UD-Czech (Script already exists)
+| 
+* Create a text corpus for various testing phases and progress measurements: 8 Basic(200 words), 2 each for each category (law, academic, literature, spoken, economics, and news)(300 words), 6 advanced(500 words)
+| This will involve working primarily on I want to have everything ready for Despite already having a solid foundation in Czech grammar, I would still like to improve upon it before I begin.
+|-
+| 1
+| 30/05 - 04/06
+| Work on expanding the bilingual dictionary, and monolingual dictionaries where necessary. Create a new tagger for Czech. Test tagger.
+| 
+*Improve bidix size to 50% clean in testvoc for all categories
+* Achieve a WER < 20% for 1 basic text
+| The bilingual dictionary has a paucity of entries at the moment. On top of this, Apertium needs a new POS-tagger for Czech, which in its current state leads to unnecessary translation errors.
+|-
+| 2
+| 05/06 - 11/06
+| Continue to expand bil-dictionary where needed(constant task), and work on lexical selection. Work on rudimentary transfer rules, as well as those for verbs.
+| 
+* Improve bidix size to 60% clean in testvoc for all categories
+* Achieve a WER < 20% for 2 basic texts
+| The expansion of the bil-dictionary and lexical selection is obviously going to be an ongoing task, as it is responsible for a majority of errors at the moment.
+|-
+| 3
+| 12/06 - 18/06
+| Continue work on transfer rules for verbs.
+| 
+* Improve bidix size to 70% clean in testvoc for all categories
+* Achieve a WER < 15% for 2 basic texts
+| As far as transfer rules, here it will be important to focus on the transfer of grammatical tags, and specifically on the treatment of reflexive verb transfer(i.e. verbs which are reflexive in Czech, but not in Russian). This could potentially be solved with a specific tag in the dictionary.
+|-
+| 4
+| 19/06 - 25/06
+| Continue work on verbal transfer rules. Work on specific transfer rules for prepositions and subject addition/placement. Create rules for ancillary Russian cases in the mono-dictionary (2nd prepositional(locative), partitive, ect.).
+| 
+* Improve bidix size to 80% clean in testvoc for all categories
+* Achieve a WER < 10% on 2 basic texts
+| Prepositions often have multiple possible translations. The subject is less mandatory in Czech than in Russian. The cases, while a minor part, provide more fluency to translations.
+|-
+|5
+|26/06 - 02/07
+| Write Dictionary entries transfer rules for specific grammatical constructions such as: ''aby, kdyby, to... ani..., ect.'' Start/Finish evaluation #1. 
+* ''Checkpoint: Measure progress of the project, and discuss the feasibility of working on Rus -> Ces. Final check on previously composed transfer rules from weeks 3-5. Test on texts, and try to "break" the translator.''
+|
+* Improve bidix size to 85% clean in testvoc for all categories
+* Achieve WER < 10% on 1 basic text
+* Achieve WER < 20% on 1 advance text
+| Many common constructions are currently absent in the dictionary and in the transfer rules. Seeing as how there is not a huge amount to cover, at this point I would like to access and discuss possibly working on the Rus -> Ces direction. Because of uncertainty, the following plans will assume continual work on the Ces -> Rus direction.
+|-
+|6
+|24/07 - 30/07
+|  Add new and fix existing transfer rule issues identified in the previous week. Begin testing on thematic texts.
+|
+* Achieve WER < 25% on texts in the following categories: law, economics (4 texts)
+|  This week will be based on evaluations of the translator's grammatical performance as a whole. I will focus solely on improving loopholes in the transfer rules of the translator.
+|-
+|7
+|03/07 - 09/07
+| Test the translator in these differing areas. Identify key places for improvement and begin working on them. Compile key terms for each topic.
+|
+* Achieve WER < 25% on texts in the following categories: academic, literature (4 texts)
+| It is important to further test the abilities of the translator on certain topics: ''Academic writing, literature, law, ect.'', and assess it's capabilities individually in these areas. One of the obvious main goals is coverage, and testing on specific topics can provide insight into deficiencies within the translator both lexical and grammatical. It is pertinent to focus effort on specific areas that will be the most beneficial for potential users.
+|-
+|8
+|10/07 - 16/07
+| Work on expanding the dictionaries in previously identified areas. Solve grammatical issues with transfer rules which arise in given thematic areas.
+|
+* Achieve WER < 25% on texts in the following categories: spoken, news (4 texts)
+| After identifying what to work on, this week I will continue to develop the dictionaries with terms common to selected topics. Here I suspect that there will also be room to expand on transfer rules, for overlooked grammatical errors which arise in the testing process.
+|-
+|9
+|17/07 - 23/07
+| Test performance increases in the selected topic areas. Ascertain what still needs to be improved. Work on fixes for issues. Start/Finish Evaluation #2
+|
+* Improve bidix size to 90% clean in testvoc for all categories
+* Achieve WER < 15% on texts in all categories
+| Here I will identify what areas of the dictionary and transfer rules still need to be developed. The changes that need to be implemented will largely rely on the evaluation.
+|-
+|10
+|31/07 - 06/08
+|Test the performance of the translator as a whole. Identify problematic areas.
+|
+* Achieve WER < 15% on 2 advanced texts
+|Testing begins, and work on finding the key areas of improvement for the translator.
+|-
+|11
+|07/08 - 13/08
+|Bug fixes, correcting most problematic areas
+|
+* Achieve WER < 10% on 2 advanced texts
+| This week is devoted to fixing bugs and the key problems and weak points identified in the previous week
+|-
+|12
+|14/08 - 20/08
+| Documentation (will try to do this gradually), final testing and bug fixes
+* Improve bidix size to 95% clean in testvoc for all categories
+* Achieve WER < 10% on all previous advanced texts and 1 new advance texts (6 texts)
+| Similar to the previous week. The last month is mostly focused on utilising time as efficiently as possible to create a quality finished product.
+|-
+|13
+|08/21 - 08/29
+| Work on final evaluations and other bureaucratic necessities.
+| Final week. Everything should be ready.
+|-
+|}
+
+== Non-GSOC Plans for the Summer ==
+
+I will be busy before GSOC starts with finishing up my thesis and preparing for my thesis defense. Consequently, I will have less time to prepare for the project (10 hours a week) before the official start date, May 30. Other than this, I will be searching for a job, so I may have to travel for interviews, but this should however not affect my total work hours per week, merely my availability at/on certain times/days.
+
+[[Category:GSoC 2017 Student Proposals‎|Lylax2]]
+
